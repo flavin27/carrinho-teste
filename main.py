@@ -1,4 +1,8 @@
-from carrinho import Pessoa
+from carrinho import Produto 
+from carrinho import Carrinho
 
-p1 = Pessoa('Luiz',25)
-p2 = Pessoa('João', 35)
+compras = Produto('carro', 300)
+
+Carrinho.adiciona_produto('batata', 300)
+
+
