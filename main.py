@@ -1,13 +1,9 @@
-from carrinho import Produto, Carrinho
+from classe import Carrinho, Produto
 
-carrinho =Carrinho()
+carrinho = Carrinho()
 
-compras = Produto('carro', 300)
+p1 = Produto('camisa', 50)
 
-Carrinho.adiciona_produto(compras)
+carrinho.inserir_produto(p1)
 
-Carrinho.mostrar_lista()
-
-
-
-
+carrinho.lista_produto()
