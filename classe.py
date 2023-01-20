@@ -1,7 +1,6 @@
 class Carrinho:
     def __init__(self):
         self.produtos  = []
-        self.c = 0
 
     def adicionar_produto(self, produto):
         self.produtos.append(produto)
@@ -11,9 +10,10 @@ class Carrinho:
         self.c -= 1
 
     def mostrar_produtos(self):
+        self.c = -1
         for produto in self.produtos:
-            print(self.c, '-', produto.nome, produto.valor)
             self.c += 1
+            print(self.c, '-', produto.nome, produto.valor)
     
     def soma_total(self):
         total = 0
