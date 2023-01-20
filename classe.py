@@ -1,13 +1,19 @@
 class Carrinho:
     def __init__(self):
         self.produtos  = []
+        self.c = 0
 
     def adicionar_produto(self, produto):
         self.produtos.append(produto)
 
+    def remover_produto(self, pos):
+        self.produtos.pop(pos)
+        self.c -= 1
+
     def mostrar_produtos(self):
         for produto in self.produtos:
-            print(produto.nome, produto.valor)
+            print(self.c, '-', produto.nome, produto.valor)
+            self.c += 1
     
     def soma_total(self):
         total = 0
